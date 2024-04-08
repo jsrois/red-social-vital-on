@@ -1,19 +1,12 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react';
-import Modal from './Modal';
+import React from 'react';
+import Modal from '../Modal';
+import '../../../Styles.css';
 
-const Header = () => {
-  const [showRegisterModal, setShowRegisterModal] = useState(false);
-
-  const handleOpenRegisterModal = () => {
-    setShowRegisterModal(true);
-  };
-
-  const handleCloseRegisterModal = () => {
-    setShowRegisterModal(false);
-  };
-
-  return (
+// eslint-disable-next-line react/prop-types
+const Header = ({ onOpenModal }) => {
+  
+    return (
     <header>
       <div className="logo-container">
         <img src="logo.png" alt="Logo" />
@@ -25,9 +18,10 @@ const Header = () => {
         </ul>
       </div>
       <div className="button-container">
-        <button onClick={handleOpenRegisterModal}>Registrarse</button>
+        <button onClick={onOpenModal}>Registrarse</button>
       </div>
       {showRegisterModal && (
+        // eslint-disable-next-line no-undef
         <Modal onClose={handleCloseRegisterModal}>
           <h1>Formulario de Registro</h1>
           <form>
