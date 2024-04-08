@@ -5,11 +5,11 @@ import React from 'react';
 function Modal({ onClose }) {
   return (
     <div className="Modal">
-      <div className="modal-content">
-        <div className="modal-header">
+      <div className="Modal-content">
+        <div className="Modal-header">
           <h1>Formulario de Registro</h1>
         </div>
-        <div className="modal-body">
+        <div className="Modal-body">
           <form>
             <input type="text" name="nombre" placeholder="Nombre completo" />
             <input type="email" name="correo" placeholder="Correo electrónico" />
@@ -17,7 +17,7 @@ function Modal({ onClose }) {
             <button type="submit">Registrarse</button>
           </form>
         </div>
-        <div className="modal-footer">
+        <div className="Modal-footer">
           <button onClick={onClose}>Cerrar</button>
         </div>
       </div>

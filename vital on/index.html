@@ -1,66 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vital On</title>
-  <link rel="stylesheet" href="Styles.css">
-  <script src="../src/components/Modal/Modal.jsx"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vital On</title>
+    <link rel="stylesheet" type="text/css" href="./Styles.css">
+    <script src="./src/components/Modal/Modal.jsx"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="logo-container">
-      <img src="../src/img/logo.png" alt="logo" />
+    <header class="header">
+        <div class="logo-container">
+            <img src="../src/img/logo.png" alt="logo" />
+        </div>
+        
+        <div class="button-container">
+            <div class="button-container">
+                <button id="open-modal-btn">Registrarse</button>
+            </div>
+            <img src="../src/img/icon-book.png" alt="icon-book" class="icon-book.png">
+        </div>
+        <div class="icon-container">
+            <div class="icon-book"></div>
+        </div>
+
+        <div class="button-container">
+          <div class="button-container">
+              <button id="open-modal-btn">Login</button>
+          </div>
+          <img src="../src/img/icon-padlock.png" alt="icon-book" class="icon-book.png">
+      </div>
+      <div class="icon-container">
+          <div class="icon-padlock"></div>
+      </div>
+    </header>
+    
+    <div id="modal-container" class="modal-container">
+        <div class="modal">
+            <div class="modal-header">
+                <h1>Formulario de Registro</h1>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <input type="text" name="nombre" placeholder="Nombre completo" />
+                    <input type="email" name="correo" placeholder="Correo electrónico" />
+                    <input type="password" name="contraseña" placeholder="Contraseña" />
+                    <button type="submit">Registrarse</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id="close-modal-btn">Cerrar</button>
+            </div>
+        </div>
     </div>
     
-    <div class="button-container">
-      <div class="button-container">
-        <button id="open-modal-btn">Registrarse</button>
-      </div>
-      <img src="src/img/icon-book.png" alt="icon-book" class="icon-book.png">
-    </div>
-    <div class="icon-container">
-    <div class="icon-book"></div>
-    </div>
-  </div>
-  </header>
-  <div id="modal-container" class="modal-container">
-    <div class="modal">
-      <div class="modal-header">
-        <h1>Formulario de Registro</h1>
-      </div>
-      <div class="modal-body">
-        <form>
-          <input type="text" name="nombre" placeholder="Nombre completo" />
-          <input type="email" name="correo" placeholder="Correo electrónico" />
-          <input type="password" name="contraseña" placeholder="Contraseña" />
-          <button type="submit">Registrarse</button>
+    <div class="root">
+        <form action="" class="form">
+            <h1 class="form__titulo">login</h1>
+            <label for="usuario" class="form__label">usuario</label>
+            <input type="text" class="form__input" required id="usuario">
+            <label for="contra" class="form__label">contraseña</label>
+            <input type="password" class="form__input" required id="contra">
+            <div class="form__opciones">
+                <label for="recordar" class="form__recordarme">
+                    <input type="checkbox" id="recordar">
+                    Recordarme en este equipo
+                </label>
+                <a href="#" class="form__enlace">¿Olvidaste tu contraseña?</a>
+            </div>
+            <button class="form__btn">entrar</button>
         </form>
-      </div>
-      <div class="modal-footer">
-        <button id="close-modal-btn">Cerrar</button>
-      </div>
     </div>
-  </div>
-  <div class="root">
-    <form action="" class="form">
-        <h1 class="form__titulo">login</h1>
-        <label for="usuario" class="form__label">usuario</label>
-        <input type="text" class="form__input" required id="usuario">
-        <label for="contra" class="form__label">contraseña</label>
-        <input type="password" class="form__input" required id="contra">
-        <div class="form__opciones">
-            <label for="recordar" class="form__recordarme">
-                <input type="checkbox" id="recordar">
-                Recordarme en este equipo
-            </label>
-            <a href="#" class="form__enlace">¿Olvidaste tu contraseña?</a>
-        </div>
-        <button class="form__btn">entrar</button>
-    </form>
-</div>
-  <script src="../src/components/Modal/Modal.jsx"></script>
+    
+    <script src="./src/components/Modal/Modal.jsx"></script>
 </body>
 </html>
+
 
