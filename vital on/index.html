@@ -1,78 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vital On</title>
-    <link rel="stylesheet" type="text/css" href="./Styles.css">
+    <link rel="stylesheet" type="text/css" href="./Styles.css" />
     <script src="./src/components/Modal/Modal.jsx"></script>
-</head>
-<body>
-    <header class="header">
-        <div class="logo-container">
-            <img src="../src/img/logo.png" alt="logo" />
-        </div>
-        
-        <div class="button-container">
-            <div class="button-container">
-                <button id="open-modal-btn">Registrarse</button>
-            </div>
-            <img src="../src/img/icon-book.png" alt="icon-book" class="icon-book.png">
-        </div>
-        <div class="icon-container">
-            <div class="icon-book"></div>
-        </div>
+           
+  </head>
 
-        <div class="button-container">
-          <div class="button-container">
-              <button id="open-modal-btn">Login</button>
-          </div>
-          <img src="../src/img/icon-padlock.png" alt="icon-book" class="icon-book.png">
+  <body>
+    <div class="header">
+      <div class="logo-container">
+        <img src="../src/img/logo.png" alt="logo" />
       </div>
-      <div class="icon-container">
-          <div class="icon-padlock"></div>
+      <div class="button-container">
+        <img src="../src/img/icon-book.png" alt="icono libro" class="icon-book" style="margin-right: 20px;"/>
+        <button class="btn-registro">REGÍSTRATE</button>
       </div>
-    </header>
+      <div class="button-container">
+        <img src="../src/img/icon-padlock.png" alt="icono candado" class="icon-lock" style="margin-right: 20px;"/>
+        <button class="btn-login">LOGIN</button>
+      </div>
     
-    <div id="modal-container" class="modal-container">
-        <div class="modal">
-            <div class="modal-header">
-                <h1>Formulario de Registro</h1>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <input type="text" name="nombre" placeholder="Nombre completo" />
-                    <input type="email" name="correo" placeholder="Correo electrónico" />
-                    <input type="password" name="contraseña" placeholder="Contraseña" />
-                    <button type="submit">Registrarse</button>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button id="close-modal-btn">Cerrar</button>
-            </div>
-        </div>
     </div>
-    
+
     <div class="root">
-        <form action="" class="form">
-            <h1 class="form__titulo">login</h1>
-            <label for="usuario" class="form__label">usuario</label>
-            <input type="text" class="form__input" required id="usuario">
-            <label for="contra" class="form__label">contraseña</label>
-            <input type="password" class="form__input" required id="contra">
-            <div class="form__opciones">
-                <label for="recordar" class="form__recordarme">
-                    <input type="checkbox" id="recordar">
-                    Recordarme en este equipo
-                </label>
-                <a href="#" class="form__enlace">¿Olvidaste tu contraseña?</a>
-            </div>
-            <button class="form__btn">entrar</button>
-        </form>
+      <form action="" class="form">
+        <h1 class="form__titulo">LOGIN</h1>
+        <label for="usuario" class="form__label">usuario</label>
+        <input type="text" class="form__input" required id="usuario" />
+        <label for="contra" class="form__label">contraseña</label>
+        <input type="password" class="form__input" required id="contra" />
+        <div class="form__opciones">
+          <label for="recordar" class="form__recordarme">
+            <input type="checkbox" id="recordar" />
+            Recordarme en este equipo
+          </label>
+          <a href="#" class="form__enlace">¿Olvidaste tu contraseña?</a>
+        </div>
+        <button class="form__btn">entrar</button>
+      </form>
     </div>
-    
-    <script src="./src/components/Modal/Modal.jsx"></script>
-</body>
+
+    <div class="modal-registro oculto">
+      <div class="modal-contenido">
+        <h2>FORMULARIO DE REGISTRO</h2>
+        <form action="#">
+          <input type="text" name="nombre" placeholder="Nombre completo" required />
+          <input type="email" name="correo" placeholder="Correo electrónico" required />
+          <input type="password" name="contrasena" placeholder="Contraseña" required />
+          <button type="submit" class="btn-registro">REGÍSTRATE</button>
+          <button class="btn-cerrar">CERRAR</button>
+        </form> 
+      </div>
+      </div>
+
+        
+        <header>
+          
+          
+        </header>
+      </div>
+    </div>
+
+    <script>
+      const btnRegistro = document.querySelector('.btn-registro');
+      const modalRegistro = document.querySelector('.modal-registro');
+      const btnCerrar = document.querySelector('.btn-cerrar');
+
+      btnRegistro.addEventListener('click', () => {
+        modalRegistro.classList.add('visible');
+      });
+
+      btnCerrar.addEventListener('click', () => {
+        modalRegistro.classList.remove('visible');
+      });
+    </script>
+    <script src="script.js"></script>
+    <main>
+    </main>
+
+  </body>
 </html>
-
-

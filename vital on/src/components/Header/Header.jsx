@@ -1,10 +1,17 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
-import Modal from '../Modal';
-import '../../../Styles.css';
+import React, { useState } from 'react';
+import Modal from '../src/components/Modal';
+import './Styles.css';
 
-// eslint-disable-next-line react/prop-types
-const Header = ({ onOpenModal }) => {
+const Header = () => {
+  // eslint-disable-next-line no-unused-vars
+  const [showModalRegister, setShowModalRegister] = useState(false);
+  const [showModalLogin, setShowModalLogin] = useState(false);
+
+  const handleOpenModalRegister = () => setShowModalRegister(true);
+
+  const handleOpenModalLogin = () => setShowModalLogin(true);
+  const handleCloseModalLogin = () => setShowModalLogin(false);
   
     return (
     <header>
@@ -13,22 +20,25 @@ const Header = ({ onOpenModal }) => {
       </div>
       <div className="nav-container">
         <ul>
-          <li><a href="#">Registro</a></li>
+          <li><a href="#">Regístrate</a></li>
           <li><a href="#">Login</a></li>
         </ul>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
       </div>
-      <div className="button-container">
-        <button onClick={onOpenModal}>Registrarse</button>
+      <div className="button-container" style={{ marginLeft: '20px' }}>
+        <button onClick={handleOpenModalRegister}>Regístrate</button>
+        <button onClick={handleOpenModalLogin}>Login</button>
       </div>
-      {showRegisterModal && (
-        // eslint-disable-next-line no-undef
-        <Modal onClose={handleCloseRegisterModal}>
-          <h1>Formulario de Registro</h1>
+      {showModalLogin && (
+        <Modal onClose={handleCloseModalLogin}>
+          <h1>Formulario de Login</h1>
           <form>
-            <input type="text" name="nombre" placeholder="Nombre completo" />
             <input type="email" name="correo" placeholder="Correo electrónico" />
             <input type="password" name="contraseña" placeholder="Contraseña" />
-            <button type="submit">Registrarse</button>
+            <button type="submit">Login</button>
           </form>
         </Modal>
       )}
