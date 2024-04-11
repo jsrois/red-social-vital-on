@@ -1,19 +1,19 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import Modal from '../src/components/Modal';
-import './Styles.css';
+import Login from '../src/components/Login';
 
 const Header = () => {
-  // eslint-disable-next-line no-unused-vars
-  const [showModalRegister, setShowModalRegister] = useState(false);
   const [showModalLogin, setShowModalLogin] = useState(false);
 
-  const handleOpenModalRegister = () => setShowModalRegister(true);
+  const handleOpenModalRegister = () => {
+    // código para abrir el modal de registro
+  };
 
   const handleOpenModalLogin = () => setShowModalLogin(true);
+
   const handleCloseModalLogin = () => setShowModalLogin(false);
-  
-    return (
+
+  return (
     <header>
       <div className="logo-container">
         <img src="logo.png" alt="Logo" />

@@ -12,7 +12,7 @@
 }
 
 body {
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #fff;
   min-height: 100vh;
 }
@@ -26,8 +26,9 @@ body {
   justify-content: space-between;
   position: relative;
 }
+
 .nav-derecha {
-  clear: both;  
+  clear: both;
 }
 
 .logo-container img {
@@ -37,9 +38,10 @@ body {
 }
 
 .logo-container {
-height: 100px;
-width: 30px;
+  height: 100px;
+  width: 30px;
 }
+
 .nav-container {
   display: flex;
   align-items: center;
@@ -66,19 +68,18 @@ width: 30px;
   display: flex;
   align-items: center;
   margin-right: 230px;
-  margin-left: 1px; 
-  }
-  
-  
+  margin-left: 1px;
+  flex-basis: 150px;
+}
 
-  .register-button-container {
-    margin-right: 50px; 
-  }
-  
-  .login-button-container {
-    margin-right: 20px;
-  }
-  
+.register-button-container {
+  margin-right: 50px;
+}
+
+.login-button-container {
+  margin-right: 20px;
+}
+
 .button-container button {
   background-color: #ffffff;
   color: #ed4608;
@@ -86,19 +87,17 @@ width: 30px;
   border: #ed4608;
   padding: 9px;
   transition: 0.3s ease-in-out;
-  box-shadow: 0 0 0 0 #ffffff,
-              0 0 0 3px;
+  box-shadow: 0 0 0 0 #ffffff, 0 0 0 3px;
   border-radius: 5px;
   border: 1px solid #ffa500;
- }
- 
+}
+
 .button-container button:hover {
   box-shadow: 0 0 0 4px #ffa500;
 }
 
 .button-container button:active {
-  box-shadow: 0 0 0 0 #ffffff,
-              0 0 0 3px #ffa500;
+  box-shadow: 0 0 0 0 #ffffff, 0 0 0 3px #ffa500;
 }
 
 @media screen and (min-width: 411px) {
@@ -106,6 +105,29 @@ width: 30px;
     display: flex;
     justify-content: space-between;
   }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal-content {
+  background-color: white;
+  margin: 150px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
 }
 
 .modal-registro {
@@ -132,7 +154,7 @@ width: 30px;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  color:#ed4608;
+  color: #ed4608;
   padding: 20px;
   border-radius: 10px;
   width: 80%;
@@ -159,7 +181,7 @@ width: 30px;
 }
 
 .modal-contenido button {
-  width: 460px;
+  width: 100%;
   margin-top: 10px;
   padding: 10px 15px;
   border-radius: 5px;
@@ -305,3 +327,23 @@ width: 30px;
 .sink-button.clicked {
   transform: translateY(5px);
 }
+
+.modal .modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal .modal-close-button svg {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+}
+
+
+
+
+
